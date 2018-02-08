@@ -1,0 +1,31 @@
+import React, { Component } from 'react'
+
+const choiceNames = ['a', 'b', 'c', 'd', 'e']
+
+class Question extends Component {
+  constructor(props) {
+    super(props)
+    this.stat = {
+      questionState: 'unanswered',
+      checked: '',
+    }
+  }
+  handleOptionChange = (e) => {
+    const val = e.target.value
+    this.setState({
+      checked: val
+    })
+    const { answer } = this.props
+    const index = choiceNames.indexOf(val, 0) + 1
+    const qState = valIndex === answer
+      ? 'correct'
+      : 'wrong'
+    this.setState({
+      questionState: qState,
+    })
+  }
+
+  render() {
+    <div key={``}
+  }
+}
